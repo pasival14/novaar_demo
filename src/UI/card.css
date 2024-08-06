@@ -1,0 +1,47 @@
+.card{
+    position: relative;
+    width: 100%;
+    position: relative;
+    margin: 0  auto;
+   padding: 0 5rem 0 5rem;
+   
+}
+
+.card h1{
+    font-size: 4rem;
+    color: #fff;
+    font-weight: 600;
+}
+
+.card p{
+    font-size: 1rem;
+    color: #fff;
+    font-weight: 400;
+    width: 400px;
+}
+
+
+
+/*============= MEDIA QUARIES FOR LARGE SCREENS========*/
+@media screen and (max-width:1024px){
+    .card h1{
+        font-size: 2.7rem;
+    }
+
+    
+}
+
+/*============= MEDIA QUARIES FOR LARGE SCREENS========*/
+@media screen and (max-width:624px){
+  .card{
+    padding: 12px;
+  }
+
+    .card h1{
+        font-size: 1.9rem;
+    }
+
+    .card p{
+        width: 80%;
+    }
+}

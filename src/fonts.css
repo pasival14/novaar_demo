@@ -1,0 +1,10 @@
+
+
+@font-face {
+    font-family: 'Nocturne';
+    src: url('./assets/fonts/Nortune-Black.woff') format('woff2'),
+         url('./assets/fonts/Nortune-Black.woff2') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+  

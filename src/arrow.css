@@ -1,0 +1,10 @@
+.custom-next-arrow, .custom-prev-arrow {
+    display: block;
+  }
+  
+  @media (max-width: 768px) {
+    .custom-next-arrow, .custom-prev-arrow {
+      display: none !important;
+    }
+  }
+  

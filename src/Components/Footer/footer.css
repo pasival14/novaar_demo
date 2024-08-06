@@ -1,0 +1,39 @@
+.sub {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.novtext {
+    font-size: 100px;
+}
+
+@media screen and (max-width:1024px) {
+    /* .novtext {
+        font-size: 100px;
+    } */
+}
+
+@media screen and (min-width:1599px) {
+    .sub {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    .novtext {
+        font-size: 130px;
+    }
+}
+
+@media screen and (min-width:1280px) and (max-height:800px) {
+    .sub {
+        margin-top: 100px;
+        margin-bottom: 100px;
+    }
+}
+
+@media screen and (max-height:769px) {
+    .sub {
+        margin-top: 45px;
+        margin-bottom: 45px;
+    }
+}

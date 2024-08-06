@@ -1,0 +1,23 @@
+      {
+        id: 18,
+        tags: ["Commercial", "Lagos"],
+        imageUrl: image1,
+        description: 'A two storey building with 8 apartments for Mr. Adediran',
+        additionalImages: [image1, image1, image1, image1]
+      },
+      {
+        id: 19,
+        title: 'Lorem Ipsum',
+        tags: ["Interior", "Lagos"],
+        imageUrl: image1,
+        description: 'A two storey building with 8 apartments for Mr. Adediran',
+        additionalImages: [image1, image1, image1, image1]
+      },
+      {
+        id: 20,
+        title: 'Lorem Ipsum',
+        tags: ["Renovation", "Lagos"],
+        imageUrl: image1,
+        description: 'A two storey building with 8 apartments for Mr. Adediran',
+        additionalImages: [image1, image1, image1, image1]
+      },

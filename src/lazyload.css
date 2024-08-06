@@ -1,0 +1,10 @@
+.lazy-load {
+    opacity: 0;
+    transition: opacity 3ms ease-in-out;
+  }
+  
+  .lazy-load.in-view {
+    opacity: 1;
+    height: auto;
+  }
+  
