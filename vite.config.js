@@ -5,7 +5,7 @@ import svgr from "vite-plugin-svgr";
 
 export default defineConfig({
   plugins: [svgr(), react()],
-  base: "./novaar-demo/",
+  base: "/novaar_demo/",
   css: {
    postcss: {
     plugins: [tailwindcss()],
