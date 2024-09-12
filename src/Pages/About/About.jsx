@@ -4,11 +4,11 @@ import { FaArrowCircleRight } from "react-icons/fa";
 import { FaArrowRight } from "react-icons/fa";
 import "./about.css"
 import "./aboutq.css"
-import about from '../../assets/about-hero.mp4'
 import Info from '../../Info';
 import PeopleSwiper from '../../People';
-import image3 from '../../assets/1.bmp';
-import { motion } from 'framer-motion';
+import image3 from '../../assets/abost.jpg';
+import { motion, useInView } from 'framer-motion';
+import { useRef } from 'react';
 import backg from '../../assets/inter.bmp'
 import Partners from './Partners';
 import Icon from './Icon';
@@ -20,6 +20,23 @@ import Button from './Button';
 
 
 const About = () => {
+
+  const ref1 = useRef(null);
+  const ref2 = useRef(null);
+  const ref3 = useRef(null);
+  const ref4 = useRef(null);
+  const ref5 = useRef(null);
+  const ref6 = useRef(null);
+  const ref7 = useRef(null);
+  
+  const isInView1 = useInView(ref1, { margin: "-100px 0px -100px 0px", once: true });
+  const isInView2 = useInView(ref2, { margin: "-100px 0px -100px 0px", once: true });
+  const isInView3 = useInView(ref3, { margin: "-100px 0px -100px 0px", once: true });
+  const isInView4 = useInView(ref4, { margin: "-100px 0px -100px 0px", once: true });
+  const isInView5 = useInView(ref5, { margin: "-100px 0px -100px 0px", once: true });
+  const isInView6 = useInView(ref6, { margin: "-100px 0px -100px 0px", once: true });
+  const isInView7 = useInView(ref7, { margin: "-100px 0px -100px 0px", once: true });
+
   return (
     <div className='' >
       <div 
@@ -28,7 +45,6 @@ const About = () => {
         backgroundImage: `linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)), url(${backg})`
       }}
       >
-        {/* <div className='bg-white absolute top-0 left-0 bg-opacity-20 w-full md:h-screen'></div> */}
         <div className=' absolute ml-4 ml:top-[190px] md:top-[300px] left-0 ml:pl-6 md:pl-10'>
           <h2 className='text-white font-nocturne text-2xl ml:text-3xl md:text-6xl leading-tight text-balance '>Pushing The Boundaries <br /> of Innovation</h2>
           <p className='text-white text-[13px] md:text-[16px] my-2'>Redefining what is posible when luxury<br /> meets innovation in modern architecture.</p>
@@ -73,13 +89,15 @@ const About = () => {
       </div>
       <div 
       className='bg-gray-600 pt-6'
-      // style={{
-      //   backgroundImage: `url(${backg})`
-      // }}
+      
       >
-        <div 
+        <motion.div 
         className='md:grid md:grid-cols-2 flex flex-col-reverse md:bg-white md:bg-opacity-50 mx-4 md:mx-8 rounded-xl'
         style={{ boxShadow: '10px 0 20px rgba(0, 0, 0, 0.8)' }}
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: isInView1 ? 1 : 0, y: isInView1 ? 0 : 50 }}
+        transition={{ duration: 0.8, ease: "easeInOut", delay: 0.5 }}
+        ref={ref1}
         >
           <div 
           className='about1 hidden bg-cover min-h-full bg-center rounded-xl md:block'
@@ -106,8 +124,14 @@ const About = () => {
             <div className='w-full h-[2px] my-4 lg:my-8 bg-white'></div>
             <Info />
           </div>
-        </div>
-        <div className='md:flex items-center justify-center bg-black px-2 my-5'>
+        </motion.div>
+        <motion.div 
+        className='md:flex items-center justify-center bg-black px-2 my-5'
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: isInView2 ? 1 : 0, y: isInView2 ? 0 : 50 }}
+        transition={{ duration: 0.8, ease: "easeInOut", delay: 0.5 }}
+        ref={ref2}
+        >
           <div 
           className='md:w-1/4 p-3 md:p-0 md:h-[100px] lg:h-[13vh] flex items-center md:border-r border-white justify-center'
           style={{ boxShadow: '4px 0 20px rgba(0, 0, 0, 0.8)' }}
@@ -115,9 +139,15 @@ const About = () => {
             <p className='text-2xl  text-center text-white'>Our Partners</p>
           </div>
           <Partners />
-        </div>
+        </motion.div>
         
-        <div className='hidden md:pb-0 pb-20 mt-16 md:flex items-center justify-center'>
+        <motion.div 
+        className='hidden md:pb-0 pb-20 mt-16 md:flex items-center justify-center'
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: isInView3 ? 1 : 0, y: isInView3 ? 0 : 50 }}
+        transition={{ duration: 0.8, ease: "easeInOut", delay: 0.5 }}
+        ref={ref3}
+        >
           <div className='clip3 flex px-4 ml:py-4 lg:px-24 ml:px-6 flex-col bg-white bg-opacity-80 w-[70vw] pt-8 pl-1 h-[60vh]  rounded-l-xl'>
             <Svg />
             <h1 className='text-3xl ml:py-0 md:py-5 opacity-80'>Who We Are</h1>
@@ -132,22 +162,34 @@ const About = () => {
             backgroundImage: `url(${aphro})`
           }}
           ></div>
-        </div>
+        </motion.div>
 
-        <div 
-        className='md:hidden clip3 relative flex flex-col justify-center bg-cover bg-center bg-no-repeat m-2 p-4'
+        <motion.div 
+        className='md:hidden rounded-xl clip3 relative flex flex-col justify-center bg-cover bg-center bg-no-repeat m-2'
         style={{
           backgroundImage: `url(${aphro})`
         }}
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: isInView4 ? 1 : 0, y: isInView4 ? 0 : 50 }}
+        transition={{ duration: 0.8, ease: "easeInOut", delay: 0.5 }}
+        ref={ref4}
         >
-          <h1 className='text-3xl text-white ml:py-0 md:py-5 opacity-80'>Who We Are</h1>
-          <p className='text-[16px] text-white ml:text-[15px] 2xl:leading-relaxed text-balance md:text-xl opacity-80'>
-          "Our legacy is built upon a foundation of innovation. In an ever-evolving world, our designs stay ahead of the curve, incorporating the latest technology and architectural strategies to create aesthetically remarkable, environmentally sustainable, intelligent spaces. Imagine living or working in a space that looks impressive and seamlessly adapts to your needs, making your life easier, safer, and more enjoyable."
-          </p>
+          <div className='bg-black p-5 bg-opacity-90 rounded-xl'>
+            <h1 className='text-xl md:text-3xl text-white ml:py-0 md:py-5 opacity-80'>Who We Are</h1>
+            <p className='text-[15px] md:text-[16px] mt-2 text-white ml:text-[15px] 2xl:leading-relaxed text-balance md:text-xl opacity-80'>
+            "Our legacy is built upon a foundation of innovation. In an ever-evolving world, our designs stay ahead of the curve, incorporating the latest technology and architectural strategies to create aesthetically remarkable, environmentally sustainable, intelligent spaces. Imagine living or working in a space that looks impressive and seamlessly adapts to your needs, making your life easier, safer, and more enjoyable."
+            </p>
             <Button prop = 'Our Services'/>
-        </div>
+          </div>
+        </motion.div>
         
-        <div className="motion">
+        <motion.div 
+        className="motion"
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: isInView5 ? 1 : 0, y: isInView5 ? 0 : 50 }}
+        transition={{ duration: 0.8, ease: "easeInOut", delay: 0.5 }}
+        ref={ref5}
+        >
           <div className="motion-container">
             <div className='motion-text md:mt-24'>
               <h1>Architecture in Motion</h1>
@@ -205,24 +247,35 @@ const About = () => {
               </div>
             </div>
           </div>
-        </div>
-        <div className='md:flex items-center p-6 justify-center'>
+        </motion.div>
+        <motion.div 
+        className='md:flex items-center p-6 justify-center'
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: isInView6 ? 1 : 0, y: isInView6 ? 0 : 50 }}
+        transition={{ duration: 0.8, ease: "easeInOut", delay: 0.5 }}
+        ref={ref6}
+        >
           <div 
-          className='w-1/3 h-[430px] 2xl:h-[450px] mt-10 p-4 flex items-center justify-center mr-3'
+          className='md:w-1/3 md:h-[430px] 2xl:h-[450px] md:mt-10 p-6 md:p-4 md:flex items-center justify-center md:mr-3'
           style={{
             borderWidth: '8px',
             borderStyle: 'solid',
             borderImage: 'linear-gradient(to right, #f6d365, #fda085) 1'
           }}
           >
-            <h2 className='text-5xl 2xl:text-6xl text-white'>Incorporating Ideas<br /> From Top Architects<br /> All Over The World</h2>
+            <h2 className=' text-2xl md:text-5xl 2xl:text-6xl text-white'>Incorporating Ideas<br className='md:block hidden' /> From <br className='md:hidden' />Top Architects<br /> All Over The World</h2>
           </div>
           <Cards />
-        </div>
-        <div>
+        </motion.div>
+        <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: isInView7 ? 1 : 0, y: isInView7 ? 0 : 50 }}
+        transition={{ duration: 0.8, ease: "easeInOut", delay: 0.5 }}
+        ref={ref7}
+        >
           <Mission />
-        </div>
-        <div className='mt-3 p-6 bg-black '>
+        </motion.div>
+        {/* <div className='mt-3 p-6 bg-black'>
             <div className='md:grid grid-cols-4'>
               <div className='col-span-1 mb-3 md:mb-0'>
                   <div className='ml-7 mt-5 text-white'>
@@ -235,7 +288,7 @@ const About = () => {
                 <PeopleSwiper />
               </div>
             </div>
-        </div>   
+        </div>    */}
         
       </div>
 

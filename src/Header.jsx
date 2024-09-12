@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import ink from '../src/assets/linkedin.svg';
-import tweet from '../src/assets/social-media.svg';
+import tweet from '../src/assets/twitter.svg';
 import instagram from '../src/assets/instagram.svg';
 import novaar from './assets/novaar.png';
 import burgerIcon from './assets/burger.png';

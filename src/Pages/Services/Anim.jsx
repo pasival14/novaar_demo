@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import './service.css';
-import anim from './Aa1.bmp';
+import anim from '../../assets/Aa1.bmp';
 
 const Anim = () => {
     const [firstWidth, setFirstWidth] = useState('50%');

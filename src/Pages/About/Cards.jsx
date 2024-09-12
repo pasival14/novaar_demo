@@ -62,6 +62,8 @@ const Cards = () => {
     const handleResize = () => {
       if (window.matchMedia('(min-width: 1600px)').matches) {
         setIndexMultiplier(14); // Reduce the multiplier for wider screens
+      } else if (window.matchMedia('(max-width: 768px)').matches) {
+        setIndexMultiplier(40); // Increase space for mobile view
       } else {
         setIndexMultiplier(18); // Default multiplier
       }
@@ -85,12 +87,12 @@ const Cards = () => {
   };
 
   return (
-    <div className='w-full overflow-x-auto h-[500px]'>
-      <div className="relative w-full h-[450px] flex items-center justify-center mt-8">
+    <div className='w-full overflow-x-auto md:h-[500px] mt-4 md:mt-0'>
+      <div className="relative w-full h-[300px] md:h-[450px] flex items-center justify-center md:mt-8">
         {cards.map((card, index) => (
           <motion.div
             key={index}
-            className="absolute rounded-lg h-[410px] w-[280px] bg-gray-700"
+            className="absolute rounded-lg md:h-[410px] md:w-[280px] bg-gray-700"
             whileHover={{ rotate: 5, x: 8, y: -15 }}
             onMouseEnter={() => setHoveredIndex(index)}
             onMouseLeave={() => setHoveredIndex(null)}
@@ -101,14 +103,14 @@ const Cards = () => {
               boxShadow: '10px 0 5px -3px rgba(0,0,0,0.5), 0 0 10px 0 rgba(0,0,0,0.5)',
             }}
           >
-            <div className="p-4 shadow-lg rounded-lg mt-3 flex flex-col md:h-[400px]">
+            <div className="p-4 shadow-lg rounded-lg mt-3 flex flex-col h-full md:h-[400px]">
               <img
                 src={card.picture}
                 alt={card.name}
-                className="w-12 h-12 m-4 rounded-full object-cover"
+                className="w-6 md:w-12 h-6 md:h-12 m-4 rounded-full object-cover"
               />
               <div className="p-4 text-white">
-                <h2 className="text-xl 2xl:text-2xl font-semibold">{card.name}</h2>
+                <h2 className="text-[16px] md:text-xl 2xl:text-2xl font-semibold">{card.name}</h2>
                 <p className="mt-2 2xl:text-lg">{card.quote}</p>
               </div>
             </div>
@@ -119,7 +121,7 @@ const Cards = () => {
         @media (max-width: 768px) {
           .absolute {
             height: 300px;
-            width: 200px;
+            width: 200px; /* Increased width */
           }
           .h-[450px] {
             height: 350px;
@@ -131,7 +133,7 @@ const Cards = () => {
             height: 300px;
           }
           .w-[280px] {
-            width: 200px;
+            width: 200px; /* Increased width */
           }
           .w-12 {
             width: 40px;

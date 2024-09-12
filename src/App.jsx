@@ -7,12 +7,10 @@ import Header from "./Header";
 import Footer from "./Components/Footer/Footer";
 import Loading from './Loading';
 
-
 const Project = lazy(() => import('./Pages/Project/Project'));
 const Services = lazy(() => import('./Pages/Services/Service'));
 const About = lazy(() => import('./Pages/About/About'));
 const Contact = lazy(() => import('./Pages/Contact/Contact'));
-
 
 const LazyLoadComponent = ({ Component }) => {
   const { ref, inView } = useInView({
@@ -36,42 +34,28 @@ function App() {
     }, 3000);
   }, []);
 
+  const location = useLocation();
+
   if (isLoading) {
     return <Loading />;
   }
 
-  const location = useLocation();
-
   return (
-    <div className="font-ubuntu overflow-x-hidden bg-[#5f604b]">
-      <Header />
-      <AnimatePresence mode="wait">
-        <Routes location={location} key={location.pathname}>
-          <Route index element={<Body />} />
-          <Route path="project" element={
-            <Suspense fallback={<div><Loading /></div>}>
-              <LazyLoadComponent Component={Project} />
-            </Suspense>
-          } />
-          <Route path="service" element={
-            <Suspense fallback={<div><Loading /></div>}>
-              <LazyLoadComponent Component={Services} />
-            </Suspense>
-          } />
-          <Route path="about" element={
-            <Suspense fallback={<div><Loading /></div>}>
-              <LazyLoadComponent Component={About} />
-            </Suspense>
-          } />
-          <Route path="contact" element={
-            <Suspense fallback={<div><Loading /></div>}>
-              <LazyLoadComponent Component={Contact} />
-            </Suspense>
-          } />
-        </Routes>
-      </AnimatePresence>
-      <Footer />
-    </div>
+    <Suspense fallback={<Loading />}>
+      <div className="font-ubuntu overflow-x-hidden bg-white">
+        <Header />
+        <AnimatePresence mode="wait">
+          <Routes location={location} key={location.pathname}>
+            <Route index element={<Body />} />
+            <Route path="project" element={<LazyLoadComponent Component={Project} />} />
+            <Route path="service" element={<LazyLoadComponent Component={Services} />} />
+            <Route path="about" element={<LazyLoadComponent Component={About} />} />
+            <Route path="contact" element={<LazyLoadComponent Component={Contact} />} />
+          </Routes>
+        </AnimatePresence>
+        <Footer />
+      </div>
+    </Suspense>
   );
 }
 

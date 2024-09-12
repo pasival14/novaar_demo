@@ -1,11 +1,8 @@
-// SubscribeComponent.js
-import React from 'react';
-
 const SubscribeComponent = () => {
   return (
     <div className=" ml:my-[6px] 2xl:my-[110px]">
       <div className="container mx-auto">
-        <h2 className="text-3xl ml:text-2xl font-semibold text-white">Subscribe to Our Newsletter</h2>
+        <h2 className="text-xl md:text-3xl ml:text-2xl font-semibold text-white">Subscribe to Our Newsletter</h2>
         <p className="text-gray-400 mt-2">Get the latest updates and offers.</p>
         <form className="mt-6 flex flex-col sm:flex-row  items-center">
           <input 

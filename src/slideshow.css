@@ -1,4 +1,4 @@
-#app {
+/* #app {
     height: 100%;
   }
   html,
@@ -6,7 +6,7 @@
     position: relative;
     height: 100%;
   }
-  
+   */
   body {
     background: #eee;
     font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
@@ -16,10 +16,10 @@
     padding: 0;
   }
   
-  .swiper {
+  /* .swiper {
     width: 100%;
     height: 100%;
-  }
+  } */
   
   .swiper-slide {
     text-align: center;

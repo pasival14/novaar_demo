@@ -11,21 +11,23 @@ export default function Modal({ selected, setSelected }) {
   return (
     <div
       onClick={() => setSelected(null)}
-      className="fixed inset-0 bg-black/50 z-50 cursor-pointer overflow-y-scroll"
+      className="fixed md:flex justify-center inset-0 bg-black/50 z-50 cursor-pointer overflow-y-auto p-4 md:p-8"
     >
       <div
         onClick={(e) => e.stopPropagation()}
-        className="w-full max-w-[700px] mx-auto my-8 px-8 cursor-default"
+        className="relative w-full max-w-[800px] h-auto md:min-w-[600px] md:max-h-screen cursor-default"
       >
-        <motion.div layoutId={`card-${selected.id}`} className="relative">
-          <ModalSlider additionalImages={selected.additionalImages} />
-          <motion.div
+        <ModalSlider additionalImages={selected.additionalImages} />
+      </div>
+
+      <motion.div layoutId={`card-${selected.id}`} className="h-full md:h-screen ml:h-[780px]">
+        <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="bg-white p-4"
+          className="bg-white p-4 md:h-full"
         >
-          <h3 className="text-2xl font-bold mb-2">{selected.title}</h3>
+          <h3 className="text-xl md:text-2xl font-bold mb-2">{selected.title}</h3>
           <div className="flex flex-wrap mt-2">
             {selected.tags.map((tag) => (
               <div
@@ -36,11 +38,9 @@ export default function Modal({ selected, setSelected }) {
               </div>
             ))}
           </div>
-          <p className="my-4">{selected.description}</p>
+          <p className="my-4 text-sm md:text-base">{selected.description}</p>
         </motion.div>
-        </motion.div>
-        
-      </div>
+      </motion.div>
     </div>
   );
 }

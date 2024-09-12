@@ -64,18 +64,20 @@ const Mision = () => {
     return (
         <div ref={missionRef}>
             <div
-                className='bg-cover bg-center w-full h-screen p-16 2xl:p-24 flex flex-col justify-between'
+                className='bg-cover bg-center w-full md:h-screen md:p-16 2xl:p-24 flex flex-col justify-between'
                 style={{
                     backgroundImage: `url(${disc})`
                 }}
             >
-                <div className='w-full flex items-center justify-between'>
+                <div className='w-full flex items-center justify-center mt-4 md:mt-0 md:justify-between'>
                     <p className='text-white'>Our Mission</p>
-                    <Button prop='Contact Us' />
+                    <div className='hidden md:block'>
+                        <Button prop='Contact Us' />
+                    </div>
                 </div>
                 <div className='mission w-full flex items-center justify-center mt-4 2xl:mt-14'>
                     <motion.h1
-                        className='text-white font-bold text-5xl 2xl:text-6xl leading-normal 2xl:leading-relaxed w-2/3 2xl:w-3/5 text-center font-nocturne'
+                        className='text-white font-bold text-xl md:text-5xl 2xl:text-6xl leading-normal 2xl:leading-relaxed w-2/3 2xl:w-3/5 text-center font-nocturne'
                         initial="hidden"
                         animate={controls}
                         onAnimationComplete={() => setLetterAnimationComplete(true)}
@@ -87,22 +89,22 @@ const Mision = () => {
                         ))}
                     </motion.h1>
                 </div>
-                <div className='text-white grid grid-cols-3 gap-2'>
+                <div className='text-white grid grid-cols-2 md:grid-cols-3 gap-2 p-6 md:p-0'>
                     {letterAnimationComplete && (
                         <motion.div
-                            className='mision1 text-lg'
+                            className='mision1 text-[14px] md:text-lg text-center'
                             initial="hidden"
                             animate={controls}
                             variants={divAnimation}
                             custom={1}
                         >
-                            <h2>1. Innovate</h2>
-                            <p className='pl-2 text-balance'>To craft architecture that embodies innovation, sustainability, and social responsibility.</p>
+                            <h2 className=''>1. Innovate</h2>
+                            <p className='md:pl-2 text-balance '>To craft architecture that embodies innovation, sustainability, and social responsibility.</p>
                         </motion.div>
                     )}
                     {letterAnimationComplete && (
                         <motion.div
-                            className='mission2 text-lg text-balance'
+                            className='mission2 text-[14px] md:text-lg text-center'
                             initial="hidden"
                             animate={controls}
                             variants={divAnimation}
@@ -114,14 +116,16 @@ const Mision = () => {
                     )}
                     {letterAnimationComplete && (
                         <motion.div
-                            className='mission3 text-lg text-balance'
+                            className='mission3 col-span-2 md:col-span-1 text-[14px] flex flex-col items-center md:text-lg text-balance'
                             initial="hidden"
                             animate={controls}
                             variants={divAnimation}
                             custom={3}
                         >
-                            <h2>3. Sustainable practices</h2>
-                            <p className='pl-2'>We are dedicated to pioneering architectural excellence through sustainable practices and innovative design.</p>
+                            <div className='w-2/3 md:w-full mt-3 md:mt-0'>
+                                <h2 className='text-center'>3. Sustainable practices</h2>
+                                <p className='pl-2 text-center'>To pioneer architectural excellence through sustainable practices and innovative design.</p>
+                            </div>
                         </motion.div>
                     )}
                 </div>
