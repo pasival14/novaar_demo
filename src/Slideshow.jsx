@@ -29,7 +29,7 @@ const slides = [
     { image: image7, title: "Building G", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet." },
     { image: image8, title: "Building H", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet." },
     { image: image9, title: "Building I", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet." },
-    { image: image11, title: "Building I", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet." }
+    { image: image11, title: "Building J", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet." }
 ];
 
 const Slideshow = () => {
