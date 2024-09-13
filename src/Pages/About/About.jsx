@@ -9,7 +9,7 @@ import PeopleSwiper from '../../People';
 import image3 from '../../assets/abost.jpg';
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
-import backg from '../../assets/inter.bmp'
+import backg from '../../assets/INTERIOR/B4.png'
 import Partners from './Partners';
 import Icon from './Icon';
 import Svg from './Svg';
@@ -17,6 +17,7 @@ import aphro from '../../assets/aphro.png'
 import Cards from './Cards';
 import Mission from './Mission'
 import Button from './Button';
+import Video from '../../Video';
 
 
 const About = () => {
@@ -291,7 +292,9 @@ const About = () => {
         </div>    */}
         
       </div>
-
+        <div>
+          <Video />
+        </div>
     </div>
   );
 };

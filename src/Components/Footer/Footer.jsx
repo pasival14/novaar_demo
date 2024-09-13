@@ -19,7 +19,7 @@ const Footer = () => {
   const isInView4 = useInView(ref4, { margin: "-100px 0px -100px 0px", once: true });
 
   return (
-    <div className='text-white w-full pt-8 md:pt-12 md:px-[15vh] md:py-12 bg-black'>
+    <div className='overflow-hidden text-white w-full pt-8 md:pt-12 md:px-[15vh] md:py-12 bg-black'>
       <motion.div 
       className='w-full ml:text-[12px] grid grid-cols-2 gap-6 justify-items-center md:flex md:items-center md:justify-between'
       initial={{ opacity: 0, y: 50 }}
@@ -82,27 +82,25 @@ const Footer = () => {
       >
         <SubscribeComponent />
       </motion.div>
-      <motion.div 
-      className='nov-container w-full flex items-center  justify-center'
+      <motion.div
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: isInView3 ? 1 : 0, y: isInView3 ? 0 : 50 }}
       transition={{ duration: 0.8, ease: "easeInOut", delay: 0.5 }}
       ref={ref3}
       >
-        <img className='novlogo w-[45px] md:w-[12vh]' src={logo} alt="" />
-        <div className='w-1 h-16 md:h-[16vh] bg-white mx-2 md:mx-10 2xl:mx-16'></div>
-        <div className='flex items-center justify-center'>
-          <h1 className='novtext text-[55px] md:text-[140px] ml:text-[70px] font-nocturne'>NOVAAR</h1>
-        </div>
-      </motion.div>
-      <hr />
-      <motion.p 
-      className='text-[#ccc] text-[1.2rem] mt-3 ml:mt-3 text-center'
-      initial={{ opacity: 0, y: 50 }}
-      animate={{ opacity: isInView4 ? 1 : 0, y: isInView4 ? 0 : 50 }}
-      transition={{ duration: 0.8, ease: "easeInOut", delay: 0.5 }}
-      ref={ref4}
-      >&copy;N0VAAR 2024</motion.p>
+        <motion.div 
+        className='nov-container w-full flex items-center  justify-center'>
+          <img className='novlogo w-[45px] md:w-[12vh]' src={logo} alt="" />
+          <div className='w-1 h-16 md:h-[16vh] bg-white mx-2 md:mx-10 2xl:mx-16'></div>
+          <div className='flex items-center justify-center'>
+            <h1 className='novtext text-[55px] md:text-[140px] ml:text-[70px] font-nocturne'>NOVAAR</h1>
+          </div>
+        </motion.div>
+        <hr />
+        <motion.p 
+        className='text-[#ccc] text-[1.2rem] mt-3 ml:mt-3 text-center'
+        >&copy;N0VAAR 2024</motion.p>
+        </motion.div>
     </div>
   );
 }

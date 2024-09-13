@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import { useRef, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -6,29 +6,29 @@ import 'swiper/css/navigation';
 import 'swiper/css/effect-fade';
 import './slideshow.css';
 import { EffectFade, Autoplay, Pagination, Navigation } from 'swiper/modules';
-import image1 from '../src/assets/N-VION/01.bmp';
-import image11 from '../src/assets/test.bmp';
-import image2 from '../src/assets/Aa1.bmp';
-import image3 from '../src/assets/EDGE/R4.bmp';
-import image4 from '../src/assets/07.bmp';
-import image5 from '../src/assets/G3.bmp';
-import image6 from '../src/assets/02.bmp';
-import image7 from '../src/assets/G9.bmp';
-import image8 from '../src/assets/G7.bmp';
-import image9 from '../src/assets/E3.bmp';
+import image1 from '../src/assets/N-VION/01.png';
+import image11 from '../src/assets/THE THEME/01.png';
+import image2 from '../src/assets/Aa1.png';
+import image3 from '../src/assets/EDGE/R1.png';
+import image4 from '../src/assets/LITH/05.png';
+import image5 from '../src/assets/INTERIOR/H1.png';
+import image6 from '../src/assets/CRYSTALINE DAY/02.png';
+import image7 from '../src/assets/BEACH/A1.png';
+import image8 from '../src/assets/INTERIOR/E1.png';
+import image9 from '../src/assets/E3.png';
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const slides = [
-    { image: image1, title: "Building A", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet." },
-    { image: image2, title: "Building B", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet." },
-    { image: image3, title: "Building C", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet." },
-    { image: image4, title: "Building D", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet." },
+    { image: image1, title: "N-VION", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet." },
+    { image: image2, title: "APHRODITE", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet." },
+    { image: image3, title: "EDGE RESIDENCE", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet." },
+    { image: image4, title: "LITH RESIDENCE", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet." },
     { image: image5, title: "Building E", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet." },
-    { image: image6, title: "Building F", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet." },
-    { image: image7, title: "Building G", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet." },
+    { image: image6, title: "CRYSTALINE DAY", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet." },
+    { image: image7, title: "BEACH HOUSE", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet." },
     { image: image8, title: "Building H", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet." },
-    { image: image9, title: "Building I", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet." },
+    { image: image9, title: "RMO", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet." },
     { image: image11, title: "Building J", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet." }
 ];
 
@@ -85,7 +85,7 @@ const Slideshow = () => {
                                         </div>
                                         <div className="px-1 mt-3">
                                             <Link to="./project">
-                                                <a href="/#" className="mr-4 text-[14px] md:text-[16px] border hover:bg-gray-500 h-[40px] w-[90px] p-[8px] rounded-xl font-bold flex items-center justify-center transition duration-300">Explore</a>
+                                                <a className="mr-4 text-[14px] md:text-[16px] border hover:bg-gray-500 h-[40px] w-[90px] p-[8px] rounded-xl font-bold flex items-center justify-center transition duration-300">Explore</a>
                                             </Link>
                                         </div>
                                     </motion.div>

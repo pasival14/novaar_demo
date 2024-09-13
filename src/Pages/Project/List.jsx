@@ -9,24 +9,26 @@ const Card = ({ setSelected, item }) => {
       className='relative'
       whileHover={{ scale: 1.03, transition: { duration: 0.4 } }}
     >
-      <motion.img 
-        className='object-cover'
-        src={item.imageUrl} alt={item.title}
+      <motion.div
+        className='w-full md:w-[32vw] h-[60vh] md:h-[65vh] bg-center bg-cover rounded-xl md:rounded-none'
+        style={{ backgroundImage: `url(${item.imageUrl})` }}
         whileTap={{ scale: 0.9 }}
         onClick={() => setSelected(item)}
       />
-      <div className='absolute bottom-0 p-4 bg-opacity-50 bg-black w-full text-white'>
-        <p>{item.title}</p>
-        <p className='text-lg text-balance'>{item.description}</p>
-        <div className="flex flex-wrap mt-2">
-          {item.tags.map((tag) => (
-            <div
-              className="badge bg-base-300 border-none text-white mr-1 mb-1"
-              key={tag}
-            >
-              {tag}
-            </div>
-          ))}
+      <div className='absolute bottom-0 left-0 bg-opacity-50 bg-black w-full md:w-[32vw] text-white rounded-xl md:rounded-none'>
+        <div className='m-4'>
+          <p className='font-bold text-[16px]'>{item.title}</p>
+          <p className='text-[14px] text-balance'>{item.description}</p>
+          <div className="flex flex-wrap mt-2">
+            {item.tags.map((tag) => (
+              <div
+                className="badge bg-base-300 border-none text-white mr-1 mb-1"
+                key={tag}
+              >
+                {tag}
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </motion.div>

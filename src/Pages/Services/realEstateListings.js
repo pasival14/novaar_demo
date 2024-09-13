@@ -1,5 +1,5 @@
-import image from '../../assets/N-VION/01.bmp'
-import image2 from '../../assets/EDGE/R1.bmp'
+import image from '../../assets/N-VION/01.png'
+import image2 from '../../assets/EDGE/R1.png'
 
 const realEstateListings = [
     {

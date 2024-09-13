@@ -1,5 +1,5 @@
-import R7 from '../../assets/EDGE/R7.bmp'
-import R3 from '../../assets/EDGE/R3.bmp'
+import R7 from '../../assets/EDGE/R7.png'
+import R3 from '../../assets/EDGE/R3.png'
 import options from '../../assets/options.svg'
 import strategy from '../../assets/strategy.svg'
 import knowledge from '../../assets/knowledge.svg'
@@ -103,8 +103,8 @@ const Real = () => {
                     </div>
                 </div>
             </div>
-            <div className='bg-[#e8e8e8] text-black pt-12 pb-16 md:pb-0 md:pt-0 md:p-28 px-4 md:px-[143px]'>
-                <div className='mb-10'>
+            <div className='bg-[#e8e8e8] text-black pt-12 pb-16 md:pb-12 md:pt-0 md:p-28 px-4 md:px-[143px]'>
+                <div className='md:pt-12 mb-10'>
                     <h2 className='flex items-center justify-center text-2xl md:text-3xl font-bold'>Real Estate Solutions</h2>
                 </div>
                 <Cards />

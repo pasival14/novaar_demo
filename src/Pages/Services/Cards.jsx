@@ -3,7 +3,7 @@ import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
 import realEstateListings from "./realEstateListings";
 import './cards.css';
-import real from '../../assets/N-VION/07.bmp';
+import real from '../../assets/N-VION/07.png';
 
 const Cards = () => {
   const [currentSlide, setCurrentSlide] = useState(0);

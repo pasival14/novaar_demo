@@ -1,17 +1,17 @@
-// import Services from '../Components/Services/Services';
-import './body.css'
+import './body.css';
 import Slideshow from '../Slideshow';
-
+import Video from '../Video';
 
 const Body = () => {
-    return ( 
-        <div className=''>
-            <Slideshow/>
+
+    return (
+        <div className="">
+            <Slideshow />
+            <div>
+                <Video />
+            </div>
         </div>
+    );
+};
 
-     );
-}
- 
 export default Body;
-
-

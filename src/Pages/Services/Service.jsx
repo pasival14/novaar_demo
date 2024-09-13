@@ -7,10 +7,10 @@ import image2 from '../../assets/6.bmp'
 import image3 from '../../assets/inter.bmp'
 import image4 from '../../assets/G7.bmp'
 import image5 from '../../assets/P1.bmp'
-import aphro from '../../assets/EDGE/R2.bmp'
-import aint from '../../assets/EDGE/R3.bmp'
-import aint2 from '../../assets/EDGE/R5.bmp'
-import nv from '../../assets/N-VION/01.bmp'
+import aphro from '../../assets/EDGE/R1.png'
+import aint from '../../assets/EDGE/R3.png'
+import aint2 from '../../assets/EDGE/R5.png'
+import nv from '../../assets/N-VION/01.png'
 import anim2 from '../../assets/2nd.png';
 import anim from '../../assets/1st.png';
 import HeroSection from './HeroSection';
@@ -18,7 +18,7 @@ import Anim from './Anim';
 import Dashboard from './Dashboard';
 import Real from './Real';
 import Construction from './Construction';
-// import { Sofa } from 'lucide-react';
+import Video from '../../Video';
 
 
 const Service = () => {
@@ -384,6 +384,9 @@ const Service = () => {
             {/* <div className=''>
                 <Dashboard />
             </div> */}
+            <div>
+                <Video />
+            </div>
         </div>
     );
 }
