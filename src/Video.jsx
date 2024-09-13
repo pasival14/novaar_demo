@@ -13,9 +13,9 @@ const Video = () => {
     const isInView2 = useInView(ref2, { margin: "-100px 0px -100px 0px", once: true });
 
     return ( 
-        <div className='w-full grid grid-cols-4'>
+        <div className='w-full md:grid grid-cols-4'>
             <motion.div 
-            className='col-span-1 bg-black py-12 px-20 -pr-[8px] text-white'
+            className='hidden md:block col-span-1 bg-black py-12 px-20 -pr-[8px] text-white'
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: isInView2 ? 1 : 0, y: isInView2 ? 0 : 50 }}
             transition={{ duration: 0.8, ease: "easeInOut", delay: 0.5 }}
@@ -46,9 +46,18 @@ const Video = () => {
                     muted
                     className="w-full h-full object-cover"
                 />
-                <div className='absolute top-0 left-0 w-full h-full bg-black bg-opacity-50'>
+                <div className='absolute top-0 left-0 w-full h-full bg-black bg-opacity-70'>
                     <div className='relative w-full h-full'>
-                        <div className='w-full text-white absolute bottom-8 left-0 px-8'>
+                        <div className='md:hidden h-full w-[75%] px-4 pb-12 text-white flex flex-col justify-end'>
+                            <h2 className='text-2xl'>Architectural excellence</h2>
+                            <p className=''>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet.</p>
+                            <div className='w-fit px-4 py-[2px] hover:bg-black hover:bg-opacity-40 inline border mt-3'>
+                                <Link to="./service">
+                                    <p>Our Services </p>
+                                </Link>
+                            </div>
+                        </div>
+                        <div className='hidden md:block w-full text-white absolute bottom-8 left-0 px-8'>
                             <p className='opacity-40'>RMO</p>
                             <div className='w-full h-[2px] bg-white bg-opacity-40' />
                             <div className='grid grid-cols-5  mt-2 p-4 bg-white bg-opacity-30 backdrop-filter backdrop-blur-lg'>
