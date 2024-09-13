@@ -83,10 +83,10 @@ const Footer = () => {
         <SubscribeComponent />
       </motion.div>
       <motion.div
-      initial={{ opacity: 0, y: 50 }}
-      animate={{ opacity: isInView3 ? 1 : 0, y: isInView3 ? 0 : 50 }}
-      transition={{ duration: 0.8, ease: "easeInOut", delay: 0.5 }}
-      ref={ref3}
+      // initial={{ opacity: 0, y: 50 }}
+      // animate={{ opacity: isInView3 ? 1 : 0, y: isInView3 ? 0 : 50 }}
+      // transition={{ duration: 0.8, ease: "easeInOut", delay: 0.5 }}
+      // ref={ref3}
       >
         <motion.div 
         className='nov-container w-full flex items-center  justify-center'>
