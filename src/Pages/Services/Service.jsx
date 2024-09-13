@@ -1,4 +1,5 @@
 import { useState, useRef } from 'react';
+import { Link } from 'react-router-dom';
 import { motion, useInView } from 'framer-motion';
 import './service.css';
 import { MdArrowOutward } from "react-icons/md";
@@ -284,7 +285,9 @@ const Service = () => {
                             </div>
                             <div className='col-span-1 h-[10vh] border'>
                                 <div className='h-full text-xl ml:text-lg flex items-center justify-center'>
-                                    <h2>EXPLORE</h2>
+                                    <Link to="/project">
+                                        <h2>EXPLORE</h2>
+                                    </Link>
                                     <div>
                                         <MdArrowOutward />
                                     </div>
@@ -342,7 +345,18 @@ const Service = () => {
                     <h2 className='text-2xl md:text-4xl ml:text-2xl'>Creating Spaces That Tells</h2>
                     <h2 className='text-2xl md:text-4xl ml:text-2xl'>Your Story</h2>
                 </div>
-                <div className='z-30 my-32 md:my-0 ml:mt-14 flex items-center justify-center w-full h-fit md:h-screen'>
+                <div className='md:hidden mt-[120px] z-40'>
+                    <div className='md:h-[180px] m-3 md:m-0 ml:h-[130px] flex flex-col border justify-center items-center md:w-full rounded-xl bg-black bg-opacity-10 backdrop-filter backdrop-blur-lg'>
+                        <h2 className='text-3xl md:text-5xl ml:text-3xl text-center'>Interior Design</h2>
+                        <p className='my-2 text-lg ml:text-[16px]'>Luxury that is unique to you.</p>
+                    </div>
+                    <div className='md:hidden p-4 h-full border bg-black bg-opacity-50 m-3 rounded-lg backdrop-filter backdrop-blur-lg'>
+                        <h1 className='text-6xl ml:text-4xl leading-none'>"</h1>
+                        <h2>"Our approach to interior design is holistic, considering every detail from furniture and lighting to textures and colors, to create a cohesive and harmonious space."</h2>
+                        <img src={image3} className='w-full h-[300px] object-cover mt-2' alt="" />
+                    </div>
+                </div>
+                <div className='hidden z-30 my-32 md:my-0 ml:mt-14 md:flex items-center justify-center w-full h-fit md:h-screen'>
                     <div className='w-[400px] ml:w-[320px]'>
                         <div className='md:h-[180px] ml:h-[130px] flex flex-col border justify-center items-center w-full rounded-xl bg-black bg-opacity-10 backdrop-filter backdrop-blur-lg'>
                             <h2 className='text-3xl md:text-5xl ml:text-3xl text-center'>Interior Design</h2>

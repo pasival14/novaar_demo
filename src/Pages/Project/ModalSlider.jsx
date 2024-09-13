@@ -51,20 +51,20 @@ function ModalSlider({ additionalImages }) {
   );
 
   return (
-    <div className="relative max-w-[800px]">
+    <div className="relative h-auto md:h-auto md:w-[1000px]">
       {/* Main Slider */}
       <div ref={sliderRef} className="keen-slider">
         {additionalImages.map((image, idx) => (
           <div
             key={idx}
-            className="keen-slider__slide w-full h-[50vh] md:h-[80vh] bg-cover bg-center"
+            className="keen-slider__slide w-full h-[60vh] md:h-[80vh] bg-cover bg-center"
             style={{ backgroundImage: `url(${image})` }}
           ></div>
         ))}
       </div>
 
       {/* Thumbnail Slider positioned directly at the bottom */}
-      <div ref={thumbnailRef} className="keen-slider flex justify-center -mt-[30px]">
+      <div ref={thumbnailRef} className="keen-slider flex justify-center md:-mt-0">
         {additionalImages.map((image, idx) => (
           <div key={idx} className="keen-slider__slide cursor-pointer mx-0">
             <img src={image} alt={`Thumbnail ${idx + 1}`} className="w-full h-auto" />

@@ -65,40 +65,40 @@ const Construction = () => {
                 <div className=' justify-self-start pl-5'>
                     <h2 className="text-3xl col-span-1">Unmatched <br />Service.<br />Unmatched<br />Excellence.</h2>
                 </div>
-                <div className="relative p-3 px-8 w-[380px] h-[220px] border-gray-600 hover:border-white border-[5px] col-span-1">
+                <div className="relative p-3 px-8 w-[320px] h-[190px] md:w-[380px] md:h-[220px] border-gray-600 hover:border-white border-[5px] col-span-1">
                     <div className='absolute -top-7 opacity-90 p-2 bg-black left-12'>
-                        <img src={delivery} className=" w-14" alt="" />
+                        <img src={delivery} className=" w-10 md:w-14" alt="" />
                     </div>
-                    <h2 className='mt-8 mb-2 font-bold text-md opacity-60'>On-Time Delivery</h2>
-                    <p className='text-md text-balance'>We have a track record of completing projects on schedule using advance management tools and techniques to efficiently plan, execute, and monitor all phases, minimizing delays and ensuring deadlines are consistently met.</p>
+                    <h2 className='mt-3 md:mt-8 mb-2 font-bold text-md opacity-60'>On-Time Delivery</h2>
+                    <p className='text-[12px] md:text-[16px] text-balance'>We have a track record of completing projects on schedule using advance management tools and techniques to efficiently plan, execute, and monitor all phases, minimizing delays and ensuring deadlines are consistently met.</p>
                 </div>
-                <div className="relative p-3 px-8 w-[380px] h-[220px] border-gray-600 hover:border-white border-[5px] col-span-1">
+                <div className="relative p-3 px-8 w-[320px] h-[190px] md:w-[380px] md:h-[220px] border-gray-600 hover:border-white border-[5px] col-span-1">
                     <div className='absolute -top-7 opacity-90 p-2 bg-black left-12'>
-                        <img src={cost} className=" w-14" alt="" />
+                        <img src={cost} className=" w-10 md:w-14" alt="" />
                     </div>
-                    <h2 className='mt-8 mb-2 font-bold text-md opacity-60'>Cost Efficient Solutions</h2>
-                    <p className='text-md text-balance'>Our expertise in value engineering helps to deliver high-quality construction while optimizing costs. This includes sourcing cost-effective materials, using efficient construction methods, and reducing waste.</p>
+                    <h2 className='mt-3 md:mt-8 mb-2 font-bold text-md opacity-60'>Cost Efficient Solutions</h2>
+                    <p className='text-[12px] md:text-[16px] text-balance'>Our expertise in value engineering helps to deliver high-quality construction while optimizing costs. This includes sourcing cost-effective materials, using efficient construction methods, and reducing waste.</p>
                 </div>
-                <div className="relative p-3 px-8 w-[380px] h-[220px] border-gray-600 hover:border-white border-[5px] col-span-1">
+                <div className="relative p-3 px-8 w-[320px] h-[190px] md:w-[380px] md:h-[220px] border-gray-600 hover:border-white border-[5px] col-span-1">
                     <div className='absolute -top-7 opacity-90 p-2 bg-black left-12'>
-                        <img src={management} className=" w-14" alt="" />
+                        <img src={management} className=" w-10 md:w-14" alt="" />
                     </div>
-                    <h2 className='mt-8 mb-2 font-bold text-md opacity-60'>Efficient Resource Management</h2>
-                    <p className='text-md text-balance'>We use advanced project management software to optimize resource allocation, reduce downtime, and manage labor costs effectively. This ensures maximum productivity and cost savings throughout the construction process.</p>
+                    <h2 className='mt-3 md:mt-8 mb-2 font-bold text-md opacity-60'>Efficient Resource Management</h2>
+                    <p className='text-[12px] md:text-[16px] text-balance'>We use advanced project management software to optimize resource allocation, reduce downtime, and manage labor costs effectively. This ensures maximum productivity and cost savings throughout the construction process.</p>
                 </div>
-                <div className="relative p-3 px-8 w-[380px] h-[220px] border-gray-600 hover:border-white border-[5px] col-span-1">
+                <div className="relative p-3 px-8 w-[320px] h-[190px] md:w-[380px] md:h-[220px] border-gray-600 hover:border-white border-[5px] col-span-1">
                     <div className='absolute -top-7 opacity-90 p-2 bg-black left-12'>
-                        <img src={downtime} className=" w-14" alt="" />
+                        <img src={downtime} className=" w-10 md:w-14" alt="" />
                     </div>
-                    <h2 className='mt-8 mb-2 font-bold text-md opacity-60'>Minimized Downtime and Disruptions</h2>
-                    <p className='text-md text-balance'>We plan meticulously to minimize downtime during construction. Implementing strategies such as phased construction, off-site fabrication, and effective scheduling to keep the project moving smoothly.</p>
+                    <h2 className='mt-3 md:mt-8 mb-2 font-bold text-md opacity-60'>Minimized Downtime and Disruptions</h2>
+                    <p className='text-[12px] md:text-[16px] text-balance'>We plan meticulously to minimize downtime during construction. Implementing strategies such as phased construction, off-site fabrication, and effective scheduling to keep the project moving smoothly.</p>
                 </div>
-                <div className="relative p-3 px-8 w-[380px] h-[220px] border-gray-600 hover:border-white border-[5px] col-span-1">
+                <div className="relative p-3 px-8 w-[320px] h-[190px] md:w-[380px] md:h-[220px] border-gray-600 hover:border-white border-[5px] col-span-1">
                     <div className='absolute -top-7 opacity-90 p-2 bg-black left-12'>
-                        <img src={investigation} className=" w-14" alt="" />
+                        <img src={investigation} className=" w-10 md:w-14" alt="" />
                     </div>
-                    <h2 className='mt-8 mb-2 font-bold text-md opacity-60'>Proactive Risk Management</h2>
-                    <p className='text-md text-balance'>We use proactive risk management practices to identify potential issues early and implement solutions quickly. This approach minimizes the risk of costly delays, budget overruns, and other unforeseen challenges.</p>
+                    <h2 className='mt-3 md:mt-8 mb-2 font-bold text-md opacity-60'>Proactive Risk Management</h2>
+                    <p className='text-[12px] md:text-[16px] text-balance'>We use proactive risk management practices to identify potential issues early and implement solutions quickly. This approach minimizes the risk of costly delays, budget overruns, and other unforeseen challenges.</p>
                 </div>
             </div>
         </div>

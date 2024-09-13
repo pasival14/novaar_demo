@@ -46,7 +46,12 @@ const About = () => {
         backgroundImage: `linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)), url(${backg})`
       }}
       >
-        <div className=' absolute ml-4 ml:top-[190px] md:top-[300px] left-0 ml:pl-6 md:pl-10'>
+        <motion.div 
+        className=' absolute ml-4 ml:top-[190px] md:top-[300px] left-0 ml:pl-6 md:pl-10'
+        initial = {{ y: '100%' }}
+        animate = {{ y: 0 }}
+        transition = {{ duration: 0.8 }}
+        >
           <h2 className='text-white font-nocturne text-2xl ml:text-3xl md:text-6xl leading-tight text-balance '>Pushing The Boundaries <br /> of Innovation</h2>
           <p className='text-white text-[13px] md:text-[16px] my-2'>Redefining what is posible when luxury<br /> meets innovation in modern architecture.</p>
           <div className='flex flex-col '>
@@ -59,7 +64,7 @@ const About = () => {
               <div className='my-2 clip1 rounded-lg w-[200px] md:w-[300px] bg-black'>
                 <button className=" bg-transparent w-full px-4 py-2 text-white rounded-l text-sm">Letter from the CEO</button>
               </div>
-              <div className='clip2 bg-black p-[6px] pl-8 rounded-lg -m-5'>
+              <div className='hidden md:block clip2 bg-black p-[6px] pl-8 rounded-lg -m-5'>
                 <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -86,7 +91,7 @@ const About = () => {
               <button className="bg-transparent border w-full border-white md:px-4 py-1 md:py-2 rounded text-sm">Our Next Chapter</button>
             </motion.div>
           </div>
-        </div>
+        </motion.div>
       </div>
       <div 
       className='bg-gray-600 pt-6'
@@ -155,7 +160,9 @@ const About = () => {
             <p className='text-[16px] ml:text-[15px] 2xl:leading-relaxed text-balance md:text-xl opacity-80'>
             "Our legacy is built upon a foundation of innovation. In an ever-evolving world, our designs stay ahead of the curve, incorporating the latest technology and architectural strategies to create aesthetically remarkable, environmentally sustainable, intelligent spaces. Imagine living or working in a space that looks impressive and seamlessly adapts to your needs, making your life easier, safer, and more enjoyable."
             </p>
+            <Link to="./service" className='mx-2 md:mx-0'>
               <Button prop = 'Our Services'/>
+            </Link>
           </div>
           <div 
           className='clip4 bg-cover bg-center w-[30vw] h-[60vh] xl:-ml-[190px] ml:-ml-[120px] bg-opacity-60  rounded-r-xl'
@@ -204,7 +211,7 @@ const About = () => {
                 <div className='my-2 clip1 w-[300px] bg-white bg-opacity-50'>
                   <button className=" bg-transparent w-full px-4 py-2 text-white rounded-lg text-sm">Projects</button>
                 </div>
-                <div className='clip2 bg-white bg-opacity-50 p-[6px] pl-8 rounded-lg -m-5'>
+                <div className='hidden md:blockclip2 bg-white bg-opacity-50 p-[6px] pl-8 rounded-lg -m-5'>
                   <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -292,9 +299,9 @@ const About = () => {
         </div>    */}
         
       </div>
-        <div>
-          <Video />
-        </div>
+      {/* <div className='w-fit h-fit'>
+        <Video />
+      </div> */}
     </div>
   );
 };

@@ -13,6 +13,7 @@ export default {
         nocturne: ['Nocturne', 'san-serif']
       },
       screens: {
+        'xs': { 'raw': '(min-width: 430px) and (max-height: 932px)'},
         'ml': { 'raw': '(min-width: 1200px) and (max-height: 768px)' },
         'ma': { 'raw': '(width: 1280px) and (height: 800px)' },
       },

@@ -6,36 +6,37 @@ import 'swiper/css/navigation';
 import 'swiper/css/effect-fade';
 import './slideshow.css';
 import { EffectFade, Autoplay, Pagination, Navigation } from 'swiper/modules';
-import image1 from '../src/assets/N-VION/01.png';
+import image1 from '../src/assets/01.png';
 import image11 from '../src/assets/THE THEME/01.png';
 import image2 from '../src/assets/Aa1.png';
 import image3 from '../src/assets/EDGE/R1.png';
 import image4 from '../src/assets/LITH/05.png';
 import image5 from '../src/assets/INTERIOR/H1.png';
-import image6 from '../src/assets/CRYSTALINE DAY/02.png';
+import image6 from '../src/assets/02.png';
 import image7 from '../src/assets/BEACH/A1.png';
-import image8 from '../src/assets/INTERIOR/E1.png';
+import image8 from '../src/assets/INTERIOR/G4.png';
 import image9 from '../src/assets/E3.png';
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const slides = [
-    { image: image1, title: "N-VION", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet." },
-    { image: image2, title: "APHRODITE", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet." },
-    { image: image3, title: "EDGE RESIDENCE", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet." },
-    { image: image4, title: "LITH RESIDENCE", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet." },
-    { image: image5, title: "Building E", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet." },
-    { image: image6, title: "CRYSTALINE DAY", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet." },
-    { image: image7, title: "BEACH HOUSE", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet." },
-    { image: image8, title: "Building H", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet." },
-    { image: image9, title: "RMO", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet." },
-    { image: image11, title: "Building J", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet." }
+    { image: image1, title: "N-VION", description: "A stunning blend of glass and steel, redefining urban sophistication with sweeping city views." },
+    { image: image2, title: "APHRODITE", description: "A minimalist sanctuary, where tranquility meets nature amidst clean lines and open spaces." },
+    { image: image3, title: "EDGE RESIDENCE", description: "A landmark building that commands attention, with a unique silhouette and innovative design." },
+    { image: image4, title: "LITH RESIDENCE", description: "A cutting-edge structure that challenges conventional design, with dynamic shapes and bold materials." },
+    { image: image5, title: "BOARD ROOM", description: "A harmonious interior blending comfort, style, and functionality to create a welcoming, dynamic environment." },
+    { image: image6, title: "CRYSTALINE DAY", description: "A bold statement of balance and proportion, combining geometric shapes and harmonious design elements." },
+    { image: image7, title: "BEACH HOUSE", description: "A beachfront residence that embraces the ocean, with expansive windows and natural elements." },
+    { image: image8, title: "RMO-Cafe", description: "An elegant setting with thoughtful design elements that invite relaxation and conversation in a cozy atmosphere." },
+    { image: image9, title: "RMO", description: "An architectural masterpiece with an avant-garde facade, offering unparalleled luxury and style." },
+    { image: image11, title: "THE THEME", description: "An elegant homage to classical architecture, seamlessly integrating historical charm with modern amenities." }
 ];
 
 const Slideshow = () => {
+    const swiperRef = useRef(null);
     const progressCircle = useRef(null);
     const progressContent = useRef(null);
-    const [currentSlide, setCurrentSlide] = useState(0);  // Track the current slide index
+    const [currentSlide, setCurrentSlide] = useState(0);
 
     const onAutoplayTimeLeft = (swiper, time, progress) => {
         progressCircle.current.style.setProperty('--progress', 1 - progress);
@@ -46,17 +47,28 @@ const Slideshow = () => {
         setCurrentSlide(swiper.activeIndex); 
     };
 
+    const handleNextSlide = () => {
+        if (swiperRef.current && swiperRef.current.swiper) {
+            swiperRef.current.swiper.slideNext();
+        }
+    };
+
+    const handlePrevSlide = () => {
+        if (swiperRef.current && swiperRef.current.swiper) {
+            swiperRef.current.swiper.slidePrev();
+        }
+    };
 
     return (
         <div className="app w-full h-[85vh] md:h-screen overflow-hidden relative text-white">
             <Swiper
+                ref={swiperRef}
                 spaceBetween={0}
                 effect={'fade'}
                 centeredSlides={true}
                 speed={1000}
                 autoplay={{ delay: 7000, disableOnInteraction: false }}
                 pagination={{ clickable: true }}
-                navigation={true}
                 modules={[EffectFade, Autoplay, Pagination, Navigation]}
                 onAutoplayTimeLeft={onAutoplayTimeLeft}
                 onSlideChange={handleSlideChange}
@@ -85,7 +97,7 @@ const Slideshow = () => {
                                         </div>
                                         <div className="px-1 mt-3">
                                             <Link to="./project">
-                                                <a className="mr-4 text-[14px] md:text-[16px] border hover:bg-gray-500 h-[40px] w-[90px] p-[8px] rounded-xl font-bold flex items-center justify-center transition duration-300">Explore</a>
+                                                <a className="mr-4 text-[14px] md:text-[16px] border hover:bg-black hover:bg-opacity-50 h-[40px] w-[90px] p-[8px] rounded-xl font-bold flex items-center justify-center transition duration-300">Explore</a>
                                             </Link>
                                         </div>
                                     </motion.div>
@@ -101,6 +113,19 @@ const Slideshow = () => {
                     <span ref={progressContent}></span>
                 </div>
             </Swiper>
+            
+            <div className="custom-navigation-buttons absolute right-6 bottom-32 flex flex-col items-center z-20">
+                <button onClick={handlePrevSlide} className="custom-button mb-2 p-2 text-black shadow-lg bg-white bg-opacity-10 backdrop-filter backdrop-blur-[2px]">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
+                    </svg>
+                </button>
+                <button onClick={handleNextSlide} className="custom-button p-2 text-black shadow-lg bg-white bg-opacity-10 backdrop-filter backdrop-blur-[2px]">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                </svg>
+                </button>
+            </div>
         </div>
     );
 };

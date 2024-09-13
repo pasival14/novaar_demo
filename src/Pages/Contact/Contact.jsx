@@ -55,8 +55,9 @@ const Contact = () => {
       >
         <div className='flex flex-col justify-center items-center'>
           <img src={home} className='w-24 md:w-32 h-24 h-md:32' alt="" />
-          <p className='text-lg text-center my-7'>You can visit our Lagos office during office hours for a more personalized experience and direct contact to one of our experts.</p>
-          <p className='text-gray-600 text-lg'>No 3/5, Coker street, Maryland, Lagos</p>
+          <p className='text-lg text-center my-7'>You can visit our Lagos or Abuja office during office hours for a more personalized experience and direct contact to one of our experts.</p>
+          <p className='text-gray-600 text-lg'>No 4, Yola Street, Trademore Estate, Lugbe, Abuja</p>
+          <p className='text-gray-600 text-lg mt-2'>No 36, Lagos Road, Ikorodu L.G.A, Lagos</p>
         </div>
         <div className='flex flex-col justify-center items-center'>
           <img src={call} className='w-[100px] md:w-28 h-[100px] md:h-28' alt="" />

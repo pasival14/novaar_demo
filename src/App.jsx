@@ -28,21 +28,22 @@ function App() {
   }
 
   return (
-    <Suspense fallback={<Loading />}>
-      <div className="font-ubuntu overflow-x-hidden bg-white">
-        <Header />
-        <AnimatePresence mode="wait">
-          <Routes location={location} key={location.pathname}>
-            <Route index element={<Body />} />
-            <Route path="project" element={<Project />} />
-            <Route path="service" element={<Services />} />
-            <Route path="about" element={<About />} />
-            <Route path="contact" element={<Contact />} />
-          </Routes>
-        </AnimatePresence>
-        <Footer />
-      </div>
-    </Suspense>
+    <AnimatePresence mode="wait">
+      <Suspense fallback={<Loading />}>
+        <div className="font-ubuntu overflow-x-hidden bg-white">
+          <Header />
+          
+            <Routes location={location} key={location.pathname}>
+              <Route index element={<Body />} />
+              <Route path="project" element={<Project />} />
+              <Route path="service" element={<Services />} />
+              <Route path="about" element={<About />} />
+              <Route path="contact" element={<Contact />} />
+            </Routes>
+          <Footer />
+        </div>
+      </Suspense>
+    </AnimatePresence>
   );
 }
 

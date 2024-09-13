@@ -90,15 +90,15 @@ const Footer = () => {
       >
         <motion.div 
         className='nov-container w-full flex items-center  justify-center'>
-          <img className='novlogo w-[45px] md:w-[12vh]' src={logo} alt="" />
-          <div className='w-1 h-16 md:h-[16vh] bg-white mx-2 md:mx-10 2xl:mx-16'></div>
+          <img className='novlogo w-[45px] md:w-[6vh]' src={logo} alt="" />
+          <div className='w-1 h-16 md:h-[12vh] bg-white mx-2 md:mx-4'></div>
           <div className='flex items-center justify-center'>
-            <h1 className='novtext text-[55px] md:text-[140px] ml:text-[70px] font-nocturne'>NOVAAR</h1>
+            <h1 className='novtext text-[55px] md:text-6xl ml:text-[70px] font-nocturne'>NOVAAR</h1>
           </div>
         </motion.div>
         <hr />
         <motion.p 
-        className='text-[#ccc] text-[1.2rem] mt-3 ml:mt-3 text-center'
+        className='text-[#ccc] text-[18px] md:text-lg mt-1 mb-2 md:mb-0 md:mt-3 ml:mt-3 text-center'
         >&copy;N0VAAR 2024</motion.p>
         </motion.div>
     </div>

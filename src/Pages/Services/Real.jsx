@@ -15,14 +15,14 @@ const Real = () => {
         <div>
             <div className="md:grid grid-cols-2 bg-white pt-24 md:pt-0 md:p-12">
                 <div 
-                className='relative md:mt-24 w-full md:w-[45vw] h-[60vh] md:h-[700px] bg-center bg-cover rounded-2xl'
+                className='relative md:mt-24 w-full md:w-[45vw] h-[60vh] md:h-[700px] bg-center bg-cover md:rounded-2xl'
                 style={{
                     backgroundImage: `url(${R7})`
                 }}
                 >
-                    <div className='absolute -top-[80px] -right-3 p-3 bg-white w-3/5 md:w-3/4 rounded-xl'>
+                    <div className='absolute -top-[80px] -right-3 p-3 bg-white w-3/5 md:w-3/4 md:rounded-xl'>
                         <div 
-                        className=' md:h-[330px] h-[200px] w-full bg-center bg-cover rounded-xl'
+                        className=' md:h-[330px] h-[200px] w-full bg-center bg-cover md:rounded-xl'
                         style={{
                             backgroundImage: `url(${R3})`
                         }}
